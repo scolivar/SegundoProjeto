@@ -30,21 +30,34 @@
     </script>
 </head>
 <body>
-	<form name="form1" action="javascript:window.history.go(0)" method="post">
-    	Valor Inicial:
-    	<input name="vi" type="text"> Reais<br><br>
-    	Valor Depósito Mensal:
-    	<input name="dm" type="text"> Reais<br><br>
-    	Taxa de Juros:
-    	<input name="tj" type="text"> %<br><br>
-    	Período:
-    	<input name="per" type="text">
-    	<select name="periodo" id="periodo">
-    		<option value="">Selecione</option>
-    		<option value="mes">Meses</option>
-    		<option value="ano">Anos</option>
-    	</select><br><br>
-    	<button onclick="return calcular()">Calcular</button>
-    </form>
+	<br>
+    <hr><hr>
+	<h1 align="center">Calculadora de Juros Compostos</h1>
+    <hr><hr>
+    <h2>Indique abaixo as condições de seu investimento:</h2>
+    <table>
+    	<tr>
+    		<td align="right">
+    			Valor Inicial:<br><br>
+    			Valor Depósito Mensal:<br><br>
+    			Taxa de Juros:<br><br>
+    			Período:<br><br><br><br></td>
+    		<td>
+    			<form name="form1" action="javascript:window.history.go(0)" method="post">
+    				<input name="vi" type="text"> Reais<br><br>
+    				<input name="dm" type="text"> Reais<br><br>
+    				<input name="tj" type="text"> %<br><br>
+    				<input name="per" type="text">
+    				<select name="periodo" id="periodo">
+    					<option value="">Selecione</option>
+    					<option value="mes">Meses</option>
+    					<option value="ano">Anos</option>
+    				</select><br><br>
+    				<button onclick="return calcular()">Calcular</button>
+    			</form>
+    		</td>
+    	</tr>
+    </table>
+
 </body>
 </html>
