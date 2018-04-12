@@ -9,9 +9,15 @@
 			var d = form1.dm.value;           //Valor do depósito mensal
 			var j = form1.tj.value;           //Taxa de juros
 			var n = form1.per.value;          //Período de investimento
-			//if (('id.periodo').val() == "ano"){//Se período for expressado em anos
-			//	n = n * 12;                   //Converte em meses para efeitos de cálculo
-			//}
+			var x = form1.periodo.value;
+			if (x == ""){                     //Se período for expressado em anos
+				window.alert('Selecione Meses ou Anos.');//Converte em meses para efeitos de cálculo
+				form1.periodo.focus();
+				return false;
+			}
+			if (x == "ano"){                  //Se período for expressado em anos
+				n = n * 12;                   //Converte em meses para efeitos de cálculo
+			}
 			var ti = 0;                       //Total investido
 			var taj = 0;                      //Total acumulado em juros
 			var t = 0; 
@@ -58,6 +64,5 @@
     		</td>
     	</tr>
     </table>
-
 </body>
 </html>
